@@ -237,7 +237,6 @@ const TourPage = () => {
         </section>
       </section>
       <div id="map" className="meeting_point"></div>
-      <script type="text/javascript" src={tour_data.bookeo_link}></script>
     </div>
   );
 };  
