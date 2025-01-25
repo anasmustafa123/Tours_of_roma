@@ -240,6 +240,6 @@ const TourPage = () => {
       <script type="text/javascript" src={tour_data.bookeo_link}></script>
     </div>
   );
-};
+};  
 
 export default TourPage;
