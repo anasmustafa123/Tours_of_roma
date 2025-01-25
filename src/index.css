@@ -1,0 +1,16 @@
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: ease-in-out;
+}
+
+img {
+  -webkit-user-drag: none; 
+}
