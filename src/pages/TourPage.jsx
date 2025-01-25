@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import { tour_data } from "../assets/data";
+import BookingWidget from "../components/BookingWidget";
 
 const TourPage = () => {
   let icon_filtering = {
@@ -237,8 +238,9 @@ const TourPage = () => {
         </section>
       </section>
       <div id="map" className="meeting_point"></div>
+      <BookingWidget widget_src="https://bookeo.com/widget.js?a=42552YKF4TC19445449DBF"></BookingWidget>
     </div>
   );
-};  
+};
 
 export default TourPage;
