@@ -1,8 +1,8 @@
 import React from "react";
-
+import { Link } from "react-router";
 const Tour = (props) => {
   return (
-    <section key={props.id} className="tour_container">
+    <Link to={"/tour/:tourId"} key={props.id} className="tour_container">
       <div className="section1">
         <img src="/VaticanGroupTour_container.webp" alt="" />
         <div>
@@ -31,7 +31,7 @@ const Tour = (props) => {
         <div className="stars">(1105)</div>
       </div>
       <div className="section3">from 75$</div>
-    </section>
+    </Link>
   );
 };
 

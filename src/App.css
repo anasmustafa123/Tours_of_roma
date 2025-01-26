@@ -21,24 +21,24 @@ div.header {
   align-self: center;
 }
 
-section.section_1 {
+.section_1 {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-section.section_1 > .heading {
+.section_1 > .heading {
   text-align: center;
   color: black;
 }
 
-section.section_1 > .heading > .heading_inner_text {
+.section_1 > .heading > .heading_inner_text {
   color: rgba(60, 60, 60, 0.704);
   font-style: italic;
   font-size: 1rem;
 }
 
-section.section_2 {
+.section_2 {
   display: flex;
   gap: 15px;
 }
@@ -193,15 +193,15 @@ div.footer_visas_container > img {
   margin-right: 1rem;
   position: relative;
   height: 100%;
-  width: 441px;
-  min-width: 441px;
+  min-width: 350px;
+  height: 230px;
 }
 
 .tour_container > .section1 > img {
   position: absolute;
   top: 0;
-  height: 300px;
-  width: auto;
+  width: 350px;
+  height: 230px;
   border-radius: 9px;
 }
 

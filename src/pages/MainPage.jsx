@@ -1,10 +1,12 @@
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Tour from "../components/Tour";
+import { useEffect } from "react";
 
 export const MainPage = () => {
   let tours = new Array(5).fill(0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="header_part_2">

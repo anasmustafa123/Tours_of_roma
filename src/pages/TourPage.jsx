@@ -108,8 +108,10 @@ const TourPage = () => {
 
   let { tourId } = useParams();
   useEffect(() => {
-    console.log(tour_data.internal_ui.meeting_point.split(",")[0]);
-    console.log({ tour_data });
+    // to insure that the page start from the top
+    window.scrollTo(0, 0);
+
+    // for the map view
     const map = L.map("map").setView([0, 0], 2); // Initial placeholder view
 
     // Fetch coordinates from Nominatim API
@@ -238,7 +240,7 @@ const TourPage = () => {
         </section>
       </section>
       <div id="map" className="meeting_point"></div>
-      <BookingWidget widget_src="https://bookeo.com/widget.js?a=42552YKF4TC19445449DBF"></BookingWidget>
+      <BookingWidget widget_src={tour_data.bookeo_link}></BookingWidget>
     </div>
   );
 };
