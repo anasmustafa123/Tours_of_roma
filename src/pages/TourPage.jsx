@@ -150,7 +150,7 @@ const TourPage = () => {
       </section>
       <section className="offers_container">
         {tour_data.internal_ui.offers.map((offer, id) => (
-          <div className="offer">
+          <div key={id} className="offer">
             <div className="icon">
               {
                 icon_filtering[
