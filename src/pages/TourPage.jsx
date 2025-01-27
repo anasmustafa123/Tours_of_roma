@@ -108,8 +108,15 @@ const TourPage = () => {
 
   let { tourId } = useParams();
   useEffect(() => {
-    // to insure that the page start from the top
-    window.scrollTo(0, 0);
+    const reload_status = sessionStorage.getItem("reload_status");
+    if (reload_status == "0") {
+      console.log("reload_status = 0");
+      sessionStorage.setItem("reload_status", "1");
+      let timeout = setTimeout(() => {
+        window.location.reload(true);
+        clearTimeout(timeout);
+      }, 100);
+    }
 
     // for the map view
     const map = L.map("map").setView([0, 0], 2); // Initial placeholder view

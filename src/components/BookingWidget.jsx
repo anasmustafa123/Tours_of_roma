@@ -6,7 +6,13 @@ const BookingWidget = (props) => {
     const script = document.createElement("script");
     script.onload = () => {
       console.log("Widget script loaded and ready to initialize");
-      props.set_update_widget(true);
+      console.log({
+        stat: String(parseInt(sessionStorage.getItem("reload_status")) + 1),
+      });
+      sessionStorage.setItem(
+        "reload_status",
+        String(parseInt(sessionStorage.getItem("reload_status")) + 1)
+      );
     };
     script.onerror = (error) => {
       console.error("Error loading widget script:", error);
@@ -22,11 +28,7 @@ const BookingWidget = (props) => {
     };
   }, []);
 
-  return (
-    <div>
-      <div id="bookeo-widget-container"></div>
-    </div>
-  );
+  return <div id="bookeo-widget-container"></div>;
 };
 
 export default BookingWidget;

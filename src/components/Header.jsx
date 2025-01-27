@@ -3,15 +3,20 @@ import { Link } from "react-router";
 export const Header = () => {
   return (
     <div className="header">
-      <Link to={"/"}  className="section_1">
+      <Link to={"/"} className="section_1">
         <section className="logo_container">
           <img src="/main_logo.svg" alt="Main Logo" />
         </section>
-        <section  className="heading">
+        <section
+          onClick={() => {
+            sessionStorage.setItem("reload_status", "0");
+          }}
+          className="heading"
+        >
           <div>Tours of Roma</div>
           <div className="heading_inner_text">Easy to book, Free to cancel</div>
         </section>
-      </Link> 
+      </Link>
       <section className="section_2">
         <a href="#">Tours</a>
         <a href="#">Audio Guides</a>
