@@ -6,13 +6,9 @@ const BookingWidget = (props) => {
     const script = document.createElement("script");
     script.onload = () => {
       console.log("Widget script loaded and ready to initialize");
-      console.log({
-        stat: String(parseInt(sessionStorage.getItem("reload_status")) + 1),
-      });
-      sessionStorage.setItem(
-        "reload_status",
-        String(parseInt(sessionStorage.getItem("reload_status")) + 1)
-      );
+      if (window.bookeo_start) {
+        let res = window.bookeo_start();
+      }
     };
     script.onerror = (error) => {
       console.error("Error loading widget script:", error);

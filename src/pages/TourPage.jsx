@@ -108,16 +108,6 @@ const TourPage = () => {
 
   let { tourId } = useParams();
   useEffect(() => {
-    const reload_status = sessionStorage.getItem("reload_status");
-    if (reload_status == "0") {
-      console.log("reload_status = 0");
-      sessionStorage.setItem("reload_status", "1");
-      let timeout = setTimeout(() => {
-        window.location.reload(true);
-        clearTimeout(timeout);
-      }, 100);
-    }
-
     // for the map view
     const map = L.map("map").setView([0, 0], 2); // Initial placeholder view
 
@@ -147,7 +137,7 @@ const TourPage = () => {
       .catch((error) => console.error("Error fetching location:", error));
   }, []);
   return (
-    <div>
+    <>
       <section className="tour_img_container">
         <img src={tour_data.internal_ui.main_image} alt="" />
         <div className="header_text">
@@ -248,7 +238,7 @@ const TourPage = () => {
       </section>
       <div id="map" className="meeting_point"></div>
       <BookingWidget widget_src={tour_data.bookeo_link}></BookingWidget>
-    </div>
+    </>
   );
 };
 
