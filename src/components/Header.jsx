@@ -3,7 +3,15 @@ import { Link } from "react-router";
 export const Header = () => {
   return (
     <div className="header">
-      <Link to={"/"} className="section_1">
+      <Link
+        onClick={() => {
+          setTimeout(() => {
+            window.location.reload(true);
+          }, 30);
+        }}
+        to={"/"}
+        className="section_1"
+      >
         <section className="logo_container">
           <img src="/main_logo.svg" alt="Main Logo" />
         </section>
