@@ -21,6 +21,7 @@ const BookingWidget = (props) => {
     target.appendChild(script);
     return () => {
       target.innerHTML = ""; // Remove widget if the component is unmounted
+      console.log("remove child")
     };
   }, []);
 

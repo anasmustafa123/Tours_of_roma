@@ -6,41 +6,51 @@ div.header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1% 0 1%;
-  font-size: 1.4rem;
   position: fixed;
   top: 0;
   z-index: 1;
-  height: 85px;
+  height: 70px;
   background-color: rgba(255, 255, 255, 0.573);
   color: rgb(75 75 75);
+  font-size: 1.2rem;
 }
 
 .logo_container img {
-  width: 60px;
+  width: 45px;
   height: auto;
   align-self: center;
 }
 
-.section_1 {
+.header > .section_1 {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.section_1 > .heading {
+.header > .section_1 > .heading {
   text-align: center;
   color: black;
 }
 
-.section_1 > .heading > .heading_inner_text {
+.header > .section_1 > .heading > .heading_inner_text {
   color: rgba(60, 60, 60, 0.704);
   font-style: italic;
   font-size: 1rem;
 }
 
-.section_2 {
+.header > .section_2 {
   display: flex;
   gap: 15px;
+}
+
+.header > .section_2.phone {
+  flex-direction: column;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background: linear-gradient(136deg, #ec5858, #ed8e8e, #f9aeae, #ff9494);
 }
 
 .header section a:hover {
@@ -65,7 +75,7 @@ div.header {
     red 78%,
     red 100%
   );
-  height: 85px;
+  height: 70px;
 }
 
 /* Inner Header 2 */
@@ -85,6 +95,7 @@ div.header {
   font-size: 5rem;
   font-weight: 600;
   text-align: center;
+  width: 80%;
 }
 
 .header_part_2 .header_text_inner {
@@ -124,7 +135,8 @@ div.header {
 .footer {
   display: flex;
   align-items: center;
-  margin: 2rem 0  2rem 0;
+  margin: 2rem 0 2rem 0;
+  overflow-x: hidden;
 }
 
 .footer section a {
@@ -158,7 +170,7 @@ div.header {
   margin: auto;
   display: flex;
   gap: 4rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .footer .section2 > section {
@@ -169,7 +181,7 @@ div.header {
 
 div.footer_visas_container {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 div.footer_visas_container > img {
@@ -185,7 +197,7 @@ div.footer_visas_container > img {
   align-items: center;
   min-height: 300px;
   height: 300px;
-  width: 74rem;
+  width: 74%;
   margin: auto;
 }
 
@@ -218,9 +230,6 @@ div.footer_visas_container > img {
   font-weight: 700;
 }
 
-.tour_container > .section2 > .content {
-}
-
 .tour_container > .section2 > .stars {
   font-size: 1.2rem;
   font-weight: 700;
@@ -228,6 +237,84 @@ div.footer_visas_container > img {
 
 .tour_container > .section3 {
   margin-left: 1rem;
+}
+
+.extention_container {
+  position: absolute;
+  z-index: 73;
+  color: white;
+  background: red;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  bottom: 0px;
+}
+
+.extention {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+
+.extention > svg {
+  width: 20px;
+  fill: white;
+}
+
+/* Tour Phone */
+
+.tour_container_phone {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  box-shadow: 1px 1px 6px #0000004a;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.tour_container_phone > img {
+  border-radius: 10px;
+}
+
+.tour_container_phone > .heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0 3px 0;
+}
+
+.tour_container_phone > .section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tour_container_phone > .content {
+  width: 80%;
+  text-align: center;
+  align-self: center;
+}
+
+.tour_container_phone > .price_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  margin: 10px 0 15px 15px;
+  align-self: start;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.515);
+}
+
+.tour_container_phone > .price_container > .price {
+  margin-left: -10px;
+  font-style: normal;
 }
 
 /* navbar */
@@ -256,7 +343,7 @@ div.footer_visas_container > img {
 }
 
 .navbar_item > svg {
-  width: 2rem;
+  width: 1.7rem;
   fill: rgb(51, 51, 51);
 }
 
@@ -313,7 +400,7 @@ div.footer_visas_container > img {
 
 .offer > .icon {
   fill: rgba(255, 0, 0, 0.648);
-  width: 30px;  
+  width: 30px;
   margin: auto;
 }
 
@@ -336,7 +423,7 @@ div.footer_visas_container > img {
 }
 .tour_details > .icon {
   fill: #0000ff8f;
-  width: 30px;  
+  width: 30px;
   margin: auto;
 }
 
@@ -345,7 +432,6 @@ div.footer_visas_container > img {
   font-weight: 600;
   margin: 2rem 0 2rem 0;
 }
-
 
 .main_tour_section > .tour_img_view {
   position: relative;
@@ -393,7 +479,6 @@ div.footer_visas_container > img {
   font-weight: 700;
 }
 
-
 .things_to_know > .thing_to_know {
   margin-left: 2rem;
 }
@@ -413,6 +498,8 @@ div.footer_visas_container > img {
   margin-left: 1rem;
 }
 
+
+
 .inclusion_container > svg {
   width: 2rem;
   fill: green;
@@ -425,11 +512,178 @@ div.footer_visas_container > img {
   text-align: center;
 }
 
-.meeting_point > .content {
-}
-
 .meeting_point#map {
   width: 60%;
   height: 500px;
   margin: auto;
+}
+
+@media (max-width: 1500px) {
+  .header_part_2 > .header_text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .tour_container > .section1 {
+    width: 300px;
+    height: 200px;
+    min-width: 300px;
+  }
+  .tour_container > .section1 > img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) {
+  /* .header_part_2 > .header_text {
+    font-size: 2.5rem;
+  } */
+  .tour_container > .section1 {
+    width: 250px;
+    height: 150px;
+    min-width: 250px;
+  }
+  .tour_container > .section1 > img {
+    width: 250px;
+    height: 150px;
+  }
+  .tour_container {
+    width: 86%;
+  }
+  .header_part_3 > img {
+    height: 80px;
+    margin: 0 20px 0 20px;
+  }
+  .navbar_item {
+    margin: 0 2rem 0px 2rem;
+  }
+  .footer .section1 {
+    margin-left: 5%;
+  }
+  .footer .section1 > img {
+    width: 7rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .tour_container_phone {
+    display: none;
+  }
+  .header > .section_2_phone {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .header > .section_2 {
+    display: none;
+  }
+  .header > .section_2.phone {
+    display: flex;
+  }
+  .header > .section_2_phone {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+  .tour_container_phone {
+    display: flex;
+  }
+  .tour_container {
+    display: none;
+  }
+  .tour_container > .section1 {
+    width: 200px;
+    height: 120px;
+    min-width: 200px;
+  }
+  .tour_container > .section1 > img {
+    width: 200px;
+    height: 120px;
+  }
+
+  .header_part_2 > .header_text {
+    font-size: 3rem;
+  }
+  .tour_container > .section2 > .content {
+    font-size: 0.85rem;
+  }
+  .tour_container {
+    width: 95%;
+    min-height: 200px;
+    height: 200px;
+  }
+  .header_part_3 > img {
+    height: 58px;
+    margin: 0 15px 0 15px;
+  }
+  .header_part_4 {
+    font-size: 1.5rem;
+  }
+  .navbar_item {
+    margin: 0 1rem 0px 1rem;
+  }
+  .footer .section2 {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  div.footer_visas_container > img {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .header_part_2 > .header_text {
+    font-size: 2.5rem;
+  }
+  .header_part_3 > img {
+    height: 46px;
+    margin: 0 10px 0 10px;
+  }
+  .header > .section_1 > .heading > .heading_inner_text {
+    display: none;
+  }
+
+  .header_part_4 {
+    font-size: 1.2rem;
+  }
+  .tour_container > .section2 > .content {
+    font-size: 0.65rem;
+    max-height: 125px;
+    overflow-y: hidden;
+  }
+  .tour_container > .section2 > .heading {
+    font-size: 1rem;
+  }
+  .navbar_item {
+    margin: 0 0.5rem 0px 0.5rem;
+  }
+  .bottom_navbar {
+    font-size: 0.8rem;
+  }
+  .footer .section2 {
+    flex-direction: column;
+  }
+  div.footer_visas_container > img {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .header_part_2 > .header_text {
+    font-size: 2rem;
+  }
+  .bottom_navbar {
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+  }
+  .navbar_item {
+    margin: 0 0.2rem 0px 0.2rem;
+  }
+  .header_part_3 > img {
+    height: 40px;
+    margin: 0 5px 0 5px;
+  }
 }
