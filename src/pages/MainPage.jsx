@@ -1,9 +1,11 @@
+import { useAsyncError } from "react-router";
 import Navbar from "../components/Navbar";
 import Tour from "../components/Tour";
+import TourPhone from "../components/TourPhone";
 import { useEffect } from "react";
 
 export const MainPage = () => {
-  let tours = new Array(5).fill(0);
+  let tours = [1,2,3,4,5,6]
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,7 +30,9 @@ export const MainPage = () => {
       </div>
       {tours.map((_, i) => (
         <>
-          <Tour id={i} key={i} />
+                    <Tour id={i} key={i} />
+                   <TourPhone id={i} key={i} />
+        
         </>
       ))}
       <Navbar></Navbar>
